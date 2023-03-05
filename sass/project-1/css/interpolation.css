@@ -1,0 +1,49 @@
+.icon-user {
+  background-image: url("user");
+  background-position: center;
+  width: 10px;
+  height: 10px;
+}
+
+.interpolation .btn.v1 {
+  position: relative;
+  padding-right: 40px;
+}
+.interpolation .btn.v1::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url("./../images/icons/user.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.interpolation .btn.v2 {
+  position: relative;
+}
+.interpolation .btn.v2::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.interpolation .btn.v2 {
+  padding-right: 40px;
+}
+.interpolation .btn.v2::before {
+  width: 20px;
+  height: 20px;
+  right: 10px;
+  background-image: url("./../images/icons/user.png");
+}
+
+/*# sourceMappingURL=interpolation.css.map */

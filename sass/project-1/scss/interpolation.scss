@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+
+$icon-name: 'user';
+
+.icon-#{$icon-name} {
+    background-image: url("#{$icon-name}");
+    background-position: center;
+    width: 10px;
+    height: 10px;
+}
+
+
+@mixin btn-icon ($name, $horizontal-position) {
+    position: relative;
+    padding-#{$horizontal-position}: 40px;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+
+        position: absolute;
+        #{$horizontal-position}: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        background-image: url("./../images/icons/#{$name}.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
+
+.interpolation .btn.v1 {
+    @include btn-icon('user', 'right')
+}
+
+
+
+
+
+
+%btn-icon-v2 {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@mixin btn-icon-v2 ($name, $icon-width, $icon-height, $horizontal-position) {
+    @extend %btn-icon-v2;
+
+    padding-#{$horizontal-position}: $icon-width + 20px;
+
+    &::before {
+        width: $icon-width;
+        height: $icon-height;
+
+        #{$horizontal-position}: 10px;
+        background-image: url("./../images/icons/#{$name}.png");
+    }
+}
+
+.interpolation .btn.v2 {
+    @include btn-icon-v2('user', 20px, 20px, 'right');
+}

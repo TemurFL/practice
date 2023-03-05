@@ -45,36 +45,36 @@ input {
   border-radius: 0;
 }
 
-body .wrapper .container, body .wrapper .green, body .wrapper {
-  display: inline-block;
-  color: pink;
-  border: 1px solid black;
-  width: 1250px;
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
 }
 
-body {
-  margin: 0;
+.container {
+  max-width: 1250px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
-body .wrapper .green {
-  color: green;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
 }
-body .wrapper .container {
-  color: red;
+
+header menu {
+  display: flex;
+  list-style: none;
 }
-body .wrapper .white {
-  color: white;
+
+.banner__text, .banner__form-wrapper {
+  width: 50%;
 }
-body * {
-  box-sizing: border-box;
-}
-body a {
-  display: inline-block;
-}
-body img {
+.banner__label {
   display: block;
 }
-body p {
-  margin: 0;
+.banner__label input {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
